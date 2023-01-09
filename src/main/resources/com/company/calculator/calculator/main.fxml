@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.calculator.calculator.MainController">
+   <children>
+      <VBox alignment="BOTTOM_RIGHT" prefHeight="170.0" prefWidth="250.0" style="-fx-background-color: #060709;">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Label fx:id="holder_lbl" maxWidth="1.7976931348623157E308" textFill="WHITE">
+               <font>
+                  <Font name="Barlow Medium" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="result_lbl" maxWidth="1.7976931348623157E308" textFill="WHITE">
+               <font>
+                  <Font name="Barlow Bold" size="45.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="20.0" right="15.0" />
+         </padding>
+      </VBox>
+      <VBox prefHeight="311.0" prefWidth="250.0" spacing="8.0" style="-fx-background-color: #5D5F63;">
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+         <children>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="15.0">
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
+               <children>
+                  <MFXButton fx:id="clear_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/clear.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="plus_minus_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/plusminus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="percentage_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/percentage.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="devide_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/divide.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="7.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
+               <children>
+                  <MFXButton fx:id="no_7_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no7.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="no_8_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no8.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="no_9_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no9.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="multiply_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/multiplysign.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="7.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
+               <children>
+                  <MFXButton fx:id="no_4_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="no_5_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no5.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="no_6_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no6.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="minus_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/minus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="7.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
+               <children>
+                  <MFXButton fx:id="no_1_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="no_2_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="no_3_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no3.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="plus_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="7.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
+               <children>
+                  <MFXButton fx:id="return_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/gobackarrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="no_0_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/no0.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="dot_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/dot.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+                  <MFXButton fx:id="equal_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/equal.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MFXButton>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="7.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
