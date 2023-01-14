@@ -16,12 +16,12 @@
             <Insets />
          </VBox.margin>
          <children>
-            <Label fx:id="holder_lbl" maxWidth="1.7976931348623157E308" textFill="WHITE">
+            <Label fx:id="holder_lbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" textAlignment="RIGHT" textFill="WHITE">
                <font>
                   <Font name="Barlow Medium" size="25.0" />
                </font>
             </Label>
-            <Label fx:id="result_lbl" maxWidth="1.7976931348623157E308" textFill="WHITE">
+            <Label fx:id="result_lbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" textAlignment="RIGHT" textFill="WHITE">
                <font>
                   <Font name="Barlow Bold" size="45.0" />
                </font>
@@ -43,7 +43,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
                <children>
-                  <MFXButton fx:id="clear_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="clear_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="ca">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -52,7 +52,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="plus_minus_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="plus_minus_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="pm">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -61,7 +61,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="percentage_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="percentage_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="per">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -70,7 +70,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="devide_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="devide_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="d">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -86,7 +86,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
                <children>
-                  <MFXButton fx:id="no_7_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_7_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="7">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -95,7 +95,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="no_8_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_8_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="8">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -104,7 +104,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="no_9_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_9_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="9">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -113,7 +113,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="multiply_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="multiply_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="m">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -129,7 +129,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
                <children>
-                  <MFXButton fx:id="no_4_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_4_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="4">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -138,7 +138,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="no_5_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_5_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="5">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -147,7 +147,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="no_6_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_6_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="6">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -156,7 +156,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="minus_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="minus_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="s">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -172,7 +172,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
                <children>
-                  <MFXButton fx:id="no_1_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_1_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="1">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -181,7 +181,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="no_2_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_2_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="2">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -190,7 +190,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="no_3_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_3_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="3">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -199,7 +199,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="plus_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="plus_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="p">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -215,7 +215,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="37.0" prefWidth="220.0" spacing="12.0">
                <children>
-                  <MFXButton fx:id="return_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="return_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="r">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -224,7 +224,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="no_0_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="no_0_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text="0">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -233,7 +233,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="dot_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="dot_btn" buttonType="RAISED" ellipsisString="" onAction="#handleInput" style="-fx-background-color: #333;" text=".">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -242,7 +242,7 @@
                         </ImageView>
                      </graphic>
                   </MFXButton>
-                  <MFXButton fx:id="equal_btn" buttonType="RAISED" ellipsisString="" style="-fx-background-color: #333;">
+                  <MFXButton fx:id="equal_btn" buttonType="RAISED" ellipsisString="" onAction="#handleOperation" style="-fx-background-color: #333;" text="eq">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
