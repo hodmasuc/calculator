@@ -31,7 +31,7 @@
             <Insets left="20.0" right="15.0" />
          </padding>
       </VBox>
-      <VBox prefHeight="311.0" prefWidth="250.0" spacing="8.0" style="-fx-background-color: #5D5F63;">
+      <VBox prefHeight="311.0" prefWidth="250.0" spacing="8.0" >
          <padding>
             <Insets left="15.0" right="15.0" />
          </padding>

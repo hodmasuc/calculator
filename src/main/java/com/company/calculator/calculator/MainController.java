@@ -6,11 +6,13 @@ import javafx.fxml.FXML;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 
+import java.util.Objects;
+
 public class MainController {
     // Global Vars
     String op;
-    double value1;
-    double value2;
+    double value1 = 0;
+    double value2 = 0;
 
     @FXML
     public Label result_lbl;
@@ -21,14 +23,16 @@ public class MainController {
     public void handleOperation(ActionEvent event) {
         // Get Control value
         String data = ((MFXButton)event.getSource()).getText();
-        // Choice
-        switch (data) {
-            case "p" -> plusOP();
-            case "s" -> subOP();
-            case "m" -> multiOP();
-            case "d" -> divideOP();
-            case "ca" -> clearOP();
-            case "eq" -> equalOP();
+        if(!Objects.equals(data, op)){
+            // Choice
+            switch (data) {
+                case "p" -> plusOP();
+                case "s" -> subOP();
+                case "m" -> multiOP();
+                case "d" -> divideOP();
+                case "ca" -> clearOP();
+                case "eq" -> equalOP();
+            }
         }
     }
 
@@ -90,6 +94,7 @@ public class MainController {
     }
 
     private void clearOP() {
+        value1 = 0; value2 =0;
         result_lbl.setText("");
         holder_lbl.setText("");
     }
@@ -97,41 +102,68 @@ public class MainController {
     private void divideOP() {
         //Set Operation
         op = "d";
+
         // Current value
-        String rst = result_lbl.getText();
-        value1 = Double.parseDouble(rst);
-        holder_lbl.setText(rst+"/");
-        result_lbl.setText("");
+        if(value1 == 0){
+            String rst = result_lbl.getText();
+            value1 = Double.parseDouble(rst);
+            holder_lbl.setText(rst+"/");
+            result_lbl.setText("");
+        }else {
+            holder_lbl.setText(value1+"/");
+            result_lbl.setText("");
+        }
+
     }
 
     private void multiOP() {
         //Set Operation
         op = "m";
+
         // Current value
-        String rst = result_lbl.getText();
-        value1 = Double.parseDouble(rst);
-        holder_lbl.setText(rst+"x");
-        result_lbl.setText("");
+        if(value1 == 0){
+            String rst = result_lbl.getText();
+            value1 = Double.parseDouble(rst);
+            holder_lbl.setText(rst+"x");
+            result_lbl.setText("");
+        }else {
+            holder_lbl.setText(value1+"x");
+            result_lbl.setText("");
+        }
+
     }
 
     private void subOP() {
         //Set Operation
         op = "s";
         // Current value
-        String rst = result_lbl.getText();
-        value1 = Double.parseDouble(rst);
-        holder_lbl.setText(rst+"-");
-        result_lbl.setText("");
+        if(value1 == 0){
+            String rst = result_lbl.getText();
+            value1 = Double.parseDouble(rst);
+            holder_lbl.setText(rst+"-");
+            result_lbl.setText("");
+        }else {
+            holder_lbl.setText(value1+"-");
+            result_lbl.setText("");
+        }
+
     }
 
     private void plusOP() {
         //Set Operation
         op = "p";
         // Current value
-        String rst = result_lbl.getText();
-        value1 = Double.parseDouble(rst);
-        holder_lbl.setText(rst+"+");
-        result_lbl.setText("");
+        if(value1 == 0){
+            String rst = result_lbl.getText();
+            value1 = Double.parseDouble(rst);
+            holder_lbl.setText(rst+"+");
+            result_lbl.setText("");
+        }else {
+            holder_lbl.setText(value1+"+");
+            result_lbl.setText("");
+        }
+
+
     }
 
     @FXML
@@ -139,7 +171,15 @@ public class MainController {
         // Get Control value
         String data = ((MFXButton)event.getSource()).getText();
         String pre = result_lbl.getText();
-        result_lbl.setText(pre+data);
+
+        if(data.contains(".") && !pre.contains(".")){
+            result_lbl.setText(pre+data);
+        }
+        if(!data.contains(".")){
+            result_lbl.setText(pre+data);
+        }
+
+
     }
 
 }
